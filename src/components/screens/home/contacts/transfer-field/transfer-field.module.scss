@@ -1,0 +1,31 @@
+@import 'src/styles/mixins';
+
+.transfer-field {
+    @include flex-horizontal-center;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+
+    > div {
+        width: 100%;
+    }
+
+    > div:first-child label {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    > div:not(:first-child) {
+        @include flex-horizontal-center;
+    }
+
+    > div:not(:first-child) label {
+        margin-bottom: 0;
+        border-radius: 0.7rem 0 0 0.7rem;
+    }
+
+    button {
+        padding: 15.9px 10px;
+        border-radius: 0 0.7rem 0.7rem 0;
+        width: 115px;
+    }
+}
